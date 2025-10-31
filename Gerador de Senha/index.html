@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+</head>
+
+<body>
+    <main>
+
+        
+            <h3>Gerador de Senha</h3>
+        
+        <div class="container-password">
+            <input type="text" readonly id="password">
+            <i class="far fa-copy" id="copy-btn" title="Copy to clipboard"></i>
+        </div>
+        <div class="options">
+            <div class="option">
+                <label for="length">Tamanho da Senha</label>
+                <div class="range-container">
+                    <input type="range" id="length" min="6" max="24" value="12">
+                    <span id="length-value">12</span>
+                </div>
+            </div>
+            <div class="option">
+                <label for="uppercase">Incluir letra maíuscula</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="option">
+                <label for="lowercase">Incluir letra minúscula</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div class="option">
+                <label for="numbers">Incluir números</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+             <div class="option">
+                <label for="symbols">Incluir símbolos</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+        <button id="generate-btn">
+            <i class="fas fa-key"></i>
+                Gerar Senha
+        </button>
+        <div class="strength-container">
+            <p> Força da Senha: <span id="strength-label">Médio</span></p>
+            <div class="strength-meter">
+                <div class="strength-bar"></div>
+            </div>
+        </div>
+    </main>
+    <script src="/app.js"></script>
+</body>
+
+</html>
